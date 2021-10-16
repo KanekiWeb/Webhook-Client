@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webhook Client</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/KanekiWeb">
+                    <img src="assets/img/kaneki.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <section id="webhook_input" class="main">
+        <div class="enter_webhook">
+            <span>Webhook Client</span>
+            <p>Enter your Webhook URL</p>
+            <div class="content">
+                <input type="text" name="webhook" id="wh" placeholder="https://discord.com/api/webhooks/...">
+                <button onclick="Login()">Login!</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="hide" id="webhook_login">
+        <section class="chat">
+            <div class="content">
+                <div class="top">
+                    <span>Messages Manager</span>
+                </div>
+                <div class="chat_content">
+                    <div id="messages" class="messages">
+                        
+                    </div>
+                    <div class="textarea">
+                        <div class="area-content">
+                            <input id="message_to_send" type="text" placeholder="Enter Message...">
+                            <button onclick="send_Message()"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="manager">
+            <div class="actual">
+                <img id="webhook_avatar" src="assets/img/null_pfp.jpg" alt="">
+                <div class="webhook_infos">
+                    <span id="webhook_name"></span>
+                    <label>ID:</label>
+                    <p id="webhook_id"></p>
+                    <label>TOKEN:</label>
+                    <p id="webhook_token"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        Made with ❤️ by <a href="https://github.com/KanekiWeb">Kaneki Web</a>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
