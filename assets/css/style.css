@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Reset */
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Scrole Bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    background-color: #0f0e17;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+/* Header */
+
+header {
+    margin: 10px 0;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    outline: none;
+    text-decoration: none;
+}
+
+header ul li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 5px solid #3b3d4e93;
+    margin: 5px;
+    transition: 0.3s all;
+}
+
+header ul li a img:hover {
+    transform: scale(1.1);
+    transition: 0.3s all;
+}
+
+/* Main Infos */
+
+section.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+section.main .enter_webhook span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+section.main .enter_webhook p {
+    font-size: 15px;
+    color: #a7a9be;
+}
+
+section.main .enter_webhook .content input {
+    background-color: #2e2f3e;
+    border-style: none;
+    border: .5px solid #2e2f3e;
+    outline: none;
+    color: #ccc;
+    width: 200%;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+section.main .enter_webhook .content button {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fffffe;
+    background-color: #ff8906;
+    border-style: none;
+    border: .5px solid #2e2f3e;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+section.main .enter_webhook .content button:hover {
+    transition: 0.3s all;
+    background-color: #c56f0c;
+}
+
+section.main .enter_webhook .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Manager (Webhook Infos) */
+
+section.manager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.manager .actual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1a25;
+    width: 59%;
+    padding: 25px 0;
+    border-radius: 12px;
+    transition: 0.3s all;
+}
+
+section.manager .actual:hover {
+    transform: scale(1.01);
+    transition: 0.3s all;
+}
+
+section.manager .actual img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+section.manager .actual span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+section.manager .actual label {
+    font-size: 12px;
+}
+
+section.manager .actual p {
+    font-size: 12px;
+    color: #a7a9be;
+}
+
+section.manager .actual .webhook_infos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+/* Chat */
+
+section.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0;
+}
+
+section.chat .content {
+    background-color: #1b1a25;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s all;
+    width: 70%;
+    height: 620px;
+}
+
+section.chat .content .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+section.chat .content .top span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section.chat .content .chat_content .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    overflow: auto;
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    background-color: #12121893;
+    border-radius: 12px;
+}
+
+section.chat .content .chat_content .messages .message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    background-color: #37394493;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.2s all;
+    margin: 5px 0;
+}
+
+section.chat .content .chat_content .messages .message:hover {
+    background-color: #43465293;
+    transition: 0.2s all;
+    transform: scale(1.01);
+}
+
+section.chat .content .chat_content .messages .message .message_content {
+    display: flex;
+    flex-direction: column;
+}
+
+section.chat .content .chat_content .messages .message .author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    /* border: 4px solid #0c0c1193; */
+    margin-right: 10px;
+    transition: 0.3s all;
+    overflow: hidden;
+}
+
+section.chat .content .chat_content .messages .message .message_content span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+section.chat .content .chat_content .messages .message .message_content p {
+    font-size: 10px;
+    color: #a7a9be;
+}
+
+section.chat .content .chat_content .textarea .area-content{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    overflow: auto;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #12121893;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+section.chat .content .chat_content .textarea .area-content input {
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+    color: #ccc;
+    padding-left: 6px;
+    width: 100%;
+}
+
+section.chat .content .chat_content .textarea .area-content button {
+    width: 40px;
+    height: 30px;
+    border-radius: 7px;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    background-color: #ff8906;
+    transition: 0.2s all;
+    margin-left: 5px;
+}
+
+section.chat .content .chat_content .textarea .area-content button:hover {
+    transition: 0.2s all;
+    background-color: #c26903;
+}
+
+/* Utils */
+
+.visible {
+    opacity: 1;
+    display: block;
+}
+
+.hide {
+    opacity: 0;
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    bottom: 17px;
+    width: 100%;
+    margin: 30px 0 10px 0;
+}
+
+footer a {
+    color: #ff8906;
+    margin: 0 5px;
+}
